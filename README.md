@@ -8,3 +8,6 @@ npm run-script build
 
 npm start
 
+#Debug
+Includes a launch config for debugging the transpiled code - remember to do a build to refresh the contents of /lib before debugging
+
