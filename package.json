@@ -24,6 +24,7 @@
     "globalSetup": "./src/testSetup.js",
     "globalTeardown": "./src/testTeardown.js",
     "testRegex": "/lib/test/[a-z]*.[T|t]est.js",
+    "testEnvironment": "node",
     "moduleFileExtensions": [
       "js",
       "json",
