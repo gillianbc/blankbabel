@@ -8,6 +8,8 @@ npm run-script build
 
 npm start
 
+It's watching for changes, so will auto-build (that's why the build script doesn't terminate)
+
 # Debug
 Includes a launch config for debugging the transpiled code - remember to do a build to refresh the contents of /lib before debugging
 
