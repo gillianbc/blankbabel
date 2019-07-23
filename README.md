@@ -72,5 +72,7 @@ You should see an entry under Remote Target.  As the source maps are present, it
 # Jest
 Will regard anything named xxx.test.js or xxx.Test.js under the /src/tests folder as a test.  As they are under src, this means that they're included in the babel transpile into the lib folder.  Coverage is enabled.
 
+# Not Perfect
 I've not managed to run jest tests using the inspector, just vscode debugging.
+Also, there are security vulnerabilities for "babel-jest": "^23.6.0", "jest": "^23.4.1" which will disappear if you upgrade both to 24, but then the tests will no longer run.  A rabbit hole I've been down already and got nowhere.
 
