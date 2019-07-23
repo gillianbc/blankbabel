@@ -14,6 +14,9 @@ npm test
 
 It's watching for changes, so will auto-build (that's why the build script doesn't terminate), so you'll need a second terminal to run the other commands.
 
+# babel.config.js
+So why have I used that rather than .babelrc?  It's what the babel team recommend.  All sorts of issues with running jests if you don't.  See https://github.com/facebook/jest/issues/6229
+
 # Debug
 Includes a vscode launch config for debugging the transpiled code - remember to do a build to refresh the contents of /lib before debugging.
 Use F9 to add a breakpoint.
@@ -68,4 +71,6 @@ You should see an entry under Remote Target.  As the source maps are present, it
 
 # Jest
 Will regard anything named xxx.test.js or xxx.Test.js under the /src/tests folder as a test.  As they are under src, this means that they're included in the babel transpile into the lib folder.  Coverage is enabled.
+
+I've not managed to run jest tests using the inspector, just vscode debugging.
 
