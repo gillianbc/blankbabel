@@ -18,6 +18,31 @@ It's watching for changes, so will auto-build (that's why the build script doesn
 Includes a vscode launch config for debugging the transpiled code - remember to do a build to refresh the contents of /lib before debugging.
 Use F9 to add a breakpoint.
 
+# Debug with the Node Inspector
+The compiled code is in the lib folder:
+
+```node inspect lib/index.js```
+
+<p>
+< Debugger listening on ws://127.0.0.1:9229/43a3ef0a-8ba3-47a8-8088-735964c3c5e4
+< For help, see: https://nodejs.org/en/docs/inspector
+< Debugger attached.
+Break on start in file:///Users/gillianbc/coding/node/temp/lib/index.js:1
+</p>
+
+It always stops at line 1 of whatever you're running.
+Type ```help``` to see available commands.  
+e.g. 
+- scripts - what scripts are loaded
+- list(15) - list 15 lines of current file
+- n - process next line
+- cont - continue
+- s - step in
+- o - step out
+- sb('file:///Users/gillianbc/coding/node/temp/lib/index.js',16) - set breakpoint at line 16 of this script (script name is from the scripts command)
+- repl - read-exec-print-loop i.e. an expression mode.  Type names of variables or run functions e.g. double(x)
+
+
 # Jest
 Will regard anything named xxx.test.js or xxx.Test.js under the /src/tests folder as a test.  As they are under src, this means that they're included in the babel transpile into the lib folder.  Coverage is enabled.
 
